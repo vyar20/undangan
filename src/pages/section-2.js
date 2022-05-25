@@ -16,26 +16,18 @@ export default function Section2({ image, openMail }) {
       ))}
 
       <div
-        className={`h-screen flex flex-col gap-4 items-center justify-center text-center z-50 text-white bg-black`}
+        className={`h-screen flex flex-col gap-8 items-center justify-center text-center z-50 text-white bg-black`}
       >
-        <Frame1
-          className={`transition-all duration-1000 delay-700  ${
-            !openMail ? "opacity-0" : "opacity-100"
-          }`}
-        />
+        <Frame1/>
 
         <p
-          className={`font-smooch text-5xl tracking-widest transition-all duration-1000 delay-700 ${
+          className={`font-smooch text-5xl tracking-widest transition-all duration-1000 delay-[2700ms] ${
             !openMail ? "opacity-0" : "opacity-100"
           }`}
         >
           Letva <br /> & <br /> Dika
         </p>
-        <Frame2
-          className={`transition-all duration-1000 delay-700 ${
-            !openMail ? "opacity-0" : "opacity-100"
-          }`}
-        />
+        <Frame2 />
       </div>
     </div>
   );

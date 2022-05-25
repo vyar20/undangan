@@ -4,7 +4,7 @@ import Rings from "../assets/svg/rings";
 export default function Section3() {
   return (
     <div className="w-full min-h-screen flex flex-col justify-center items-center gap-10 py-10">
-      <p className="font-smooch text-shadow text-xl">About Us</p>
+      <p className="font-smooch text-shadow text-4xl">About Us</p>
 
       <div className="relative flex justify-center items-center flex-col text-center gap-2">
         <FramePicture className="w-40" />

@@ -13,16 +13,33 @@ import Section6 from "./pages/section-6";
 import Section7 from "./pages/section-7";
 import Section8 from "./pages/section-8";
 import Section9 from "./pages/section-9";
-
+import gsap from "gsap";
 export default function App() {
   const [openMail, setOpenMail] = useState(false);
   const [image, setImage] = useState(0);
   const [play, setPlay] = useState(false);
   const [showTitle, setShowTitile] = useState(true);
 
+  const startAnimationFrame1 = () => {
+    const tlFrame = gsap.timeline({delay: 1.5})
+    const tlDove = gsap.timeline({delay: 1.7})
+    
+    tlFrame.fromTo("#frame1", {opacity: 0, y: "-1rem", x: "4rem"}, {opacity: 1, y: 0, x: 0, duration: 1})
+    tlDove.fromTo("#dove1", {opacity: 0, y: "-1rem", x: "4rem"}, {opacity: 1, y: 0, x: 0, duration: 1})
+  };
+
+  const startAnimationFrame2 = () => {
+    const tlFrame = gsap.timeline({delay: 1.5})
+    const tlDove = gsap.timeline({delay: 1.7})
+    
+    tlFrame.fromTo("#frame2", {opacity: 0, y: "1rem", x: "-4rem"}, {opacity: 1, y: 0, x: 0, duration: 1})
+    tlDove.fromTo("#dove2", {opacity: 0, y: "-1rem", x: "-4rem"}, {opacity: 1, y: 0, x: 0, duration: 1})
+  };
+
   const startFunction = () => {
     playMusic(false);
-
+    startAnimationFrame1();
+    startAnimationFrame2()
     document.querySelector("body").style.overflow = "auto";
     let num = 0;
     setInterval(() => {
@@ -74,7 +91,7 @@ export default function App() {
       <Section7 />
 
       <Section9 />
-      
+
       <Section8 />
       
     </div>

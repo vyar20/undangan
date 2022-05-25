@@ -45,7 +45,7 @@ export default function Section5({ image, openMail }) {
       >
         <p className="font-smooch text-5xl">Save The Date</p>
 
-        <div className="flex gap-20">
+        <div className="flex justify-around w-full">
           <div>
             <p className="text-4xl">{time.days}</p>
             <p>Hari</p>

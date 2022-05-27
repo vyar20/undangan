@@ -33,7 +33,7 @@ export default function Section5({ image, openMail }) {
       {imageArray.map((x, i) => (
         <div
           key={x}
-          className={`w-full h-screen bg-center top-0 left-0 absolute max-w-full max-h-screen ${
+          className={`w-full h-screen bg-center bg-fixed bg-cover top-0 left-0 absolute max-w-full max-h-screen ${
             i === image ? "animate-landing-page" : "-z-10 opacity-0"
           }`}
           style={{ backgroundImage: `url("${x}")` }}

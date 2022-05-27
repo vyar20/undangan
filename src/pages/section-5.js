@@ -29,7 +29,7 @@ export default function Section5({ image, openMail }) {
     }, 1000);
   }, []);
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative section5">
       {imageArray.map((x, i) => (
         <div
           key={x}
@@ -43,9 +43,9 @@ export default function Section5({ image, openMail }) {
       <div
         className={`h-screen flex flex-col gap-10 items-center relative justify-center font-poppins text-center z-20 text-white bg-opacity-50 bg-black`}
       >
-        <p className="font-smooch text-5xl">Save The Date</p>
+        <p className="font-smooch text-5xl obj-1">Save The Date</p>
 
-        <div className="flex justify-around w-full">
+        <div className="flex justify-around w-full  obj-2">
           <div>
             <p className="text-4xl">{time.days}</p>
             <p>Hari</p>
@@ -67,9 +67,9 @@ export default function Section5({ image, openMail }) {
           </div>
         </div>
         <a
-          href="https://www.google.co.id/maps/place/Advis+PRINT+SHOP/@-6.282206,106.7424695,17z/data=!4m5!3m4!1s0x2e69f01550b2907f:0x8f8a27a1a5fc85ef!8m2!3d-6.2822113!4d106.7466967?hl=id"
+          href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Wedding%20Letva%20-%20Dika&details&dates=20220803T100000/20220522T220000&location"
           target="_blank"
-          className="font-poppins transition-all duration-300 text-xs border px-2 py-2 rounded flex items-center hover:bg-white hover:bg-opacity-25"
+          className="font-poppins transition-all duration-300 text-xs border px-2 py-2 rounded flex items-center hover:bg-white hover:bg-opacity-25  obj-3"
         >
           Remind Me
         </a>

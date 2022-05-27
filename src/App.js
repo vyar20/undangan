@@ -98,7 +98,8 @@ export default function App() {
           duration: 1,
           scrollTrigger: {
             trigger: x,
-            start: "top center",
+            // markers: true,
+            start: "top 20%",
           },
         }
       )

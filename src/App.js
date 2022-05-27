@@ -90,7 +90,7 @@ export default function App() {
     ].map((x, i) =>
       gsap.fromTo(
         x,
-        { opacity: 0, x: i % 2 === 0 ? "3rem" : "-3rem" },
+        { opacity: 0, x: i % 2 === 0 ? "1rem" : "-1rem" },
         {
           opacity: 1,
           x: 0,
@@ -114,7 +114,7 @@ export default function App() {
     ].map((x, i) => {
       gsap.fromTo(
         x,
-        { opacity: 0, x: i % 2 === 0 ? "3rem" : "-3rem" },
+        { opacity: 0, x: i % 2 === 0 ? "1rem" : "-1rem" },
         {
           opacity: 1,
           x: 0,

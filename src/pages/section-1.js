@@ -2,6 +2,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import Flowers from "../assets/svg/flowers-1";
+import { useEffect, useState } from "react";
 
 const theme = createTheme({
   palette: {
@@ -12,6 +13,18 @@ const theme = createTheme({
 });
 
 export default function Section1({ openMail, setOpenMail, startFunction }) {
+  // eslint-disable-next-line no-unused-vars
+  const [invitation, setInvitation] = useState("");
+
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // eslint-disable-next-line no-unused-vars
+    for (const [key, value] of urlParams) {
+     setInvitation(value)
+    }
+  }, [])
   return (
     <div
       className={`w-full h-screen bg-img-1 z-40 fixed transition-all duration-700 ease-in ${
@@ -32,7 +45,7 @@ export default function Section1({ openMail, setOpenMail, startFunction }) {
         </div>
         <div className="flex flex-col gap-2">
           <p className="font-poppins text-xs">Special Invite To</p>
-          <p className="font-poppins text-xl">Dika</p>
+          <p className="font-poppins text-xl">{invitation}</p>
           <ThemeProvider theme={theme}>
             <Button
               variant="outlined"

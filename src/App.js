@@ -95,11 +95,11 @@ export default function App() {
           opacity: 1,
           x: 0,
           y: 0,
-          duration: 1,
+          duration: .5,
           scrollTrigger: {
             trigger: x,
-            // markers: true,
-            start: "top 20%",
+            markers: true,
+            start: "top 90%",
           },
         }
       )

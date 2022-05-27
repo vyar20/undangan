@@ -5,20 +5,23 @@ import imageArray from "../utils/image";
 export default function Section2({ image, openMail }) {
   return (
     <div className="w-full h-screen overflow-hidden">
-      {imageArray.map((x, i) => (
-        <div
-          key={x}
-          className={`w-full h-screen bg-center bg-cover bg-fixed top-0 left-0 absolute max-w-full max-h-screen ${
-            i === image ? "animate-landing-page" : "-z-10 opacity-0"
-          }`}
-          style={{ backgroundImage: `url("${x}")` }}
-        />
-      ))}
+        {imageArray.map((x, i) => (
+          <div
+            src={x}
+            alt="i"
+            key={x}
+            className={`w-full h-screen bg-center bg-cover bg-fixed top-0 left-0 absolute max-w-full max-h-screen ${
+              i === image ? "animate-landing-page" : "-z-10 opacity-0"
+            }`}
+
+            style={{backgroundImage: `url("${x}")`}}
+          />
+        ))}
 
       <div
         className={`h-screen flex flex-col gap-8 items-center justify-center text-center z-50 text-white bg-black`}
       >
-        <Frame1/>
+        <Frame1 />
 
         <p
           className={`font-smooch text-5xl tracking-widest transition-all duration-1000 delay-[2700ms] ${

@@ -68,6 +68,8 @@ export default function App() {
       ".section4 .obj-2",
       ".section4 .obj-3",
       ".section4 .obj-4",
+      ".section4 .obj-5",
+      ".section4 .obj-6",
 
       ".section5 .obj-1",
       ".section5 .obj-2",
@@ -88,18 +90,21 @@ export default function App() {
       ".section8 .obj-3",
 
     ].map((x, i) =>
+      // const el = document.querySelector(x);
+
+      // el.classList.add("opacity-0");
+      // el.classList.add("opacity-0");
+      // el.classList.add("opacity-0");
       gsap.fromTo(
         x,
-        { opacity: 0, x: i % 2 === 0 ? "1rem" : "-1rem" },
+        { opacity: 0, translateX: i % 2 === 0 ? "1rem" : "-1rem" },
         {
           opacity: 1,
-          x: 0,
-          y: 0,
-          duration: .5,
+          translateX: 0,
+          duration: 1,
           scrollTrigger: {
             trigger: x,
-            markers: true,
-            start: "top 90%",
+            start: "top 90%",   
           },
         }
       )

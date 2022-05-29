@@ -25,3 +25,11 @@ body{
 .text-shadow{
   text-shadow: .5rem .6rem #eee;
 }
+
+.translate-left{
+  transform: translateX(-1rem);
+}
+
+.translate-right{
+  transform: translateX(1rem);
+}

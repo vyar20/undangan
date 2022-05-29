@@ -11,22 +11,22 @@ export default function Section4() {
       style={{ backgroundColor: "#557C55" }}
     >
       <RingsAkad className="w-24 obj-1" />
-      <p className="font-smooch text-3xl tracking-wider obj-1">
+      <p className="font-smooch text-3xl tracking-wider obj-2">
         Akad Nikah & Resepsi
       </p>
 
-      <div className="flex gap-4 items-center obj-2">
+      <div className="flex gap-4 items-center obj-3">
         <p className="font-poppins text-xs">09:00 WIB - Selesai</p>
         <p className="-translate-y-[.2rem]">|</p>
         <p className="font-poppins text-xs">10:00 WIB - Selesai</p>
       </div>
 
-      <p className="font-poppins text-xs obj-3">
+      <p className="font-poppins text-xs obj-4">
         006 10 Blok B12, Jl. W R Supratman, Rengas, Kec. Ciputat Tim., Kota
         Tangerang Selatan, Banten 15412
       </p>
 
-      <div className="flex justify-between obj-4">
+      <div className="flex justify-between obj-5">
         <p className="font-poppins">Location On Maps</p>
 
         <a
@@ -38,7 +38,7 @@ export default function Section4() {
         </a>
       </div>
 
-      <div className="w-full obj-4">
+      <div className="w-full obj-6">
         <iframe
           className="w-full h-64 rounded"
           id="gmap_canvas"

@@ -19,6 +19,45 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+const elementArray = [
+  ".section3 .aboutus",
+  ".section3 .picture1",
+  ".section3 .picture2",
+  ".section3 .rings",
+
+  ".section4 .obj-1",
+  ".section4 .obj-2",
+  ".section4 .obj-3",
+  ".section4 .obj-4",
+  ".section4 .obj-5",
+  ".section4 .obj-6",
+
+  ".section5 .obj-1",
+  ".section5 .obj-2",
+  ".section5 .obj-3",
+
+  ".section6 .obj-1",
+  ".section6 .obj-2",
+  ".section6 .obj-3",
+  ".section6 .obj-4",
+
+  ".section7 .obj-1",
+  ".section7 .obj-2",
+  ".section7 .obj-3",
+  ".section7 .obj-4",
+
+  ".section8 .obj-1",
+  ".section8 .obj-2",
+  ".section8 .obj-3",
+
+  ".section9 .obj-1",
+  ".section9 .obj-2",
+  ".section9 .obj-3",
+  ".section9 .obj-4",
+  ".section9 .obj-5",
+  ".section9 .obj-6",
+];
+
 export default function App() {
   const [openMail, setOpenMail] = useState(false);
   const [image, setImage] = useState(0);
@@ -58,80 +97,17 @@ export default function App() {
   };
 
   const startAnimationSection3 = () => {
-    [
-      ".section3 .aboutus",
-      ".section3 .picture1",
-      ".section3 .picture2",
-      ".section3 .rings",
+    elementArray.map((x, i) => {
+      const el = document.querySelector(x);
 
-      ".section4 .obj-1",
-      ".section4 .obj-2",
-      ".section4 .obj-3",
-      ".section4 .obj-4",
-      ".section4 .obj-5",
-      ".section4 .obj-6",
+      el.classList.add("opacity-0");
+      el.classList.add("duration-1000");
 
-      ".section5 .obj-1",
-      ".section5 .obj-2",
-      ".section5 .obj-3",
-
-      ".section6 .obj-1",
-      ".section6 .obj-2",
-      ".section6 .obj-3",
-      ".section6 .obj-4",
-
-      ".section7 .obj-1",
-      ".section7 .obj-2",
-      ".section7 .obj-3",
-      ".section7 .obj-4",
-
-      ".section8 .obj-1",
-      ".section8 .obj-2",
-      ".section8 .obj-3",
-
-    ].map((x, i) =>
-      // const el = document.querySelector(x);
-
-      // el.classList.add("opacity-0");
-      // el.classList.add("opacity-0");
-      // el.classList.add("opacity-0");
-      gsap.fromTo(
-        x,
-        { opacity: 0, translateX: i % 2 === 0 ? "1rem" : "-1rem" },
-        {
-          opacity: 1,
-          translateX: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: x,
-            start: "top 90%",   
-          },
-        }
-      )
-    );
-
-    [
-      ".section9 .obj-1",
-      ".section9 .obj-2",
-      ".section9 .obj-3",
-      ".section9 .obj-4",
-      ".section9 .obj-5",
-      ".section9 .obj-6",
-    ].map((x, i) => {
-      gsap.fromTo(
-        x,
-        { opacity: 0, x: i % 2 === 0 ? "1rem" : "-1rem" },
-        {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: x,
-            start: "top bottom",
-          },
-        }
-      );
+      if (i % 2 === 0) {
+        el.classList.add("-translate-x-4");
+      } else {
+        el.classList.add("translate-x-4");
+      }
     });
   };
 
@@ -171,8 +147,25 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    elementArray.map(x => {
+      const el = document.querySelector(x);
+
+      gsap.to(x, {
+        scrollTrigger: {
+          trigger: x, 
+          start: "top 90%",
+          onEnter(){
+            el.classList.remove("opacity-0", "translate-x-4", "-translate-x-4")
+          }
+        }
+      })
+    });    
+  }, []);
+
   return (
     <div className={`w-full min-h-screen ${!openMail && "overflow-hidden"}`}>
+
       <MusicPlayer playMusic={playMusic} play={play} showTitle={showTitle} />
 
       <Section1

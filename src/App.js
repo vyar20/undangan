@@ -154,7 +154,7 @@ export default function App() {
       gsap.to(x, {
         scrollTrigger: {
           trigger: x, 
-          start: "top 90%",
+          start: "top 100%",
           onEnter(){
             el.classList.remove("opacity-0", "translate-x-4", "-translate-x-4")
           }

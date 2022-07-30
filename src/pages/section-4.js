@@ -22,15 +22,15 @@ export default function Section4() {
       </div>
 
       <p className="font-poppins text-xs obj-4">
-        006 10 Blok B12, Jl. W R Supratman, Rengas, Kec. Ciputat Tim., Kota
-        Tangerang Selatan, Banten 15412
+        Jl. Yaktapena Raya, Pd. Ranji, Kec. Ciputat Timur, Kota Tangerang
+        Selatan, Banten 15412
       </p>
 
       <div className="flex justify-between obj-5">
         <p className="font-poppins">Location On Maps</p>
 
         <a
-          href="https://www.google.co.id/maps/place/Advis+PRINT+SHOP/@-6.282206,106.7424695,17z/data=!4m5!3m4!1s0x2e69f01550b2907f:0x8f8a27a1a5fc85ef!8m2!3d-6.2822113!4d106.7466967?hl=id"
+          href="https://www.google.co.id/maps/place/Masjid+Jami'+At+Taqwa/@-6.286049,106.7420951,17.82z/data=!4m9!1m2!2m1!1saula+di+dekat+Masjid+At+Taqwa,+Jalan+Yaktapena+Raya,+Pondok+Ranji,+Ciputat+Tim.,+Kota+Tangerang+Selatan,+Banten!3m5!1s0x2e69f016668b12f3:0x900980757e957007!8m2!3d-6.2861082!4d106.743658!15sCm9hdWxhIGRpIGRla2F0IE1hc2ppZCBBdCBUYXF3YSwgSmFsYW4gWWFrdGFwZW5hIFJheWEsIFBvbmRvayBSYW5qaSwgQ2lwdXRhdCBUaW0uLCBLb3RhIFRhbmdlcmFuZyBTZWxhdGFuLCBCYW50ZW5aayJpYXVsYSBkaSBkZWthdCBtYXNqaWQgYXQgdGFxd2EgamFsYW4geWFrdGFwZW5hIHJheWEgcG9uZG9rIHJhbmppIGNpcHV0YXQgdGltIGtvdGEgdGFuZ2VyYW5nIHNlbGF0YW4gYmFudGVukgEGbW9zcXVlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJQT1hVdE5GRlJFQUU?hl=id"
           target="_blank"
           className="font-poppins text-xs transition-all duration-300 border px-2 rounded flex items-center hover:bg-white hover:bg-opacity-25"
         >

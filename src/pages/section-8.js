@@ -41,17 +41,24 @@ export default function Section8() {
         </p>
         <p className="font-smooch text-4xl  obj-6">Letva & Dika</p>
       </div>
-      {showModal && (
-        <div
-          onClick={closeModal}
-          id="modal"
-          className="fixed w-full h-screen z-[60] bg-black bg-opacity-50 top-0 flex justify-center items-center"
-        >
-          <div>
-            <img src={require("../assets/image/qr.png")} alt="qr" />
-          </div>
+      <div
+        onClick={closeModal}
+        id="modal"
+        className={`duration-300 fixed w-full h-screen bg-black bg-opacity-50 top-0 flex justify-center items-center ${
+          showModal ? "opacity-100 z-50" : "opacity-0 -z-10"
+        }`}
+        style={{ backdropFilter: "blur(10px)" }}
+      >
+        <div>
+          <img
+            src={require("../assets/image/qr.png")}
+            alt="qr"
+            className={`duration-300 w-52 ${
+              showModal ? "translate-y-0" : "-translate-y-5"
+            }`}
+          />
         </div>
-      )}
+      </div>
     </div>
   );
 }

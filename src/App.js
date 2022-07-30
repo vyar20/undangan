@@ -41,14 +41,14 @@ const elementArray = [
   ".section6 .obj-3",
   ".section6 .obj-4",
 
-  ".section7 .obj-1",
-  ".section7 .obj-2",
-  ".section7 .obj-3",
-  ".section7 .obj-4",
+  // ".section7 .obj-1",
+  // ".section7 .obj-2",
+  // ".section7 .obj-3",
+  // ".section7 .obj-4",
 
-  ".section8 .obj-1",
-  ".section8 .obj-2",
-  ".section8 .obj-3",
+  // ".section8 .obj-1",
+  // ".section8 .obj-2",
+  // ".section8 .obj-3",
 
   ".section9 .obj-1",
   ".section9 .obj-2",
@@ -148,24 +148,27 @@ export default function App() {
   };
 
   useEffect(() => {
-    elementArray.map(x => {
+    elementArray.map((x) => {
       const el = document.querySelector(x);
 
       gsap.to(x, {
         scrollTrigger: {
-          trigger: x, 
+          trigger: x,
           start: "top 100%",
-          onEnter(){
-            el.classList.remove("opacity-0", "translate-x-4", "-translate-x-4")
-          }
-        }
-      })
-    });    
+          onEnter() {
+            el.classList.remove("opacity-0", "translate-x-4", "-translate-x-4");
+          },
+        },
+      });
+    });
   }, []);
 
   return (
-    <div className={`w-full min-h-screen ${!openMail && "overflow-hidden"}`}>
-
+    <div
+      className={`w-full min-h-screen bg-black overflow-hidden ${
+        !openMail && "overflow-hidden"
+      }`}
+    >
       <MusicPlayer playMusic={playMusic} play={play} showTitle={showTitle} />
 
       <Section1
@@ -184,9 +187,9 @@ export default function App() {
 
       <Section6 />
 
-      <Section7 />
+      {/* <Section7 /> */}
 
-      <Section9 />
+      {/* <Section9 /> */}
 
       <Section8 />
     </div>

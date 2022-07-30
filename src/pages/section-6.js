@@ -2,11 +2,15 @@ import SwipeToSeeMore from "../assets/svg/swipe";
 import imageArray from "../utils/image";
 export default function Section6() {
   return (
-    <div className="w-full flex flex-col gap-5 items-center p-4 section6">
+    <div className="w-full flex flex-col gap-5 items-center p-4 section6 bg-white">
       <p className="font-smooch text-4xl text-shadow obj-1">Galeri</p>
 
       <video controls className="w-full obj-4">
-        <source src={require("../assets/music/music-1.mp4")} type="video/mp4" />
+        <source src={require("../assets/landscape1.mp4")} type="video/mp4" />
+      </video>
+
+      <video controls className="h-screen obj-2">
+        <source src={require("../assets/landscape2.mp4")} type="video/mp4" />
       </video>
 
       <div

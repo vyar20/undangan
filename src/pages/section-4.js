@@ -4,7 +4,7 @@
 import RingsAkad from "../assets/svg/Rings-akad";
 
 /* eslint-disable react/jsx-no-target-blank */
-export default function Section4() {
+export default function Section4({ en }) {
   return (
     <div
       className="w-full p-4 text-white flex flex-col gap-4 section4"
@@ -12,14 +12,26 @@ export default function Section4() {
     >
       <RingsAkad className="w-24 obj-1" />
       <p className="font-smooch text-3xl tracking-wider obj-2">
-        Akad Nikah & Resepsi
+        {!en ? "Akad Nikah & Resepsi" : "Marriage & Wedding Reception"}
       </p>
 
-      <div className="flex gap-4 items-center obj-3">
-        <p className="font-poppins text-xs">09:00 WIB - Selesai</p>
-        <p className="-translate-y-[.2rem]">|</p>
-        <p className="font-poppins text-xs">10:00 WIB - Selesai</p>
-      </div>
+      {!en ? (
+        <div className="flex gap-4 items-center obj-3">
+          <p className="font-poppins text-xs">09:00 WIB - Selesai</p>
+          <p className="-translate-y-[.2rem]">|</p>
+          <p className="font-poppins text-xs">10:00 WIB - Selesai</p>
+        </div>
+      ) : (
+        <div className="flex gap-4 items-center obj-3">
+          <p className="font-poppins text-xs">
+            09:00 West Indonesian Time - Finish
+          </p>
+          <p className="-translate-y-[.2rem]">|</p>
+          <p className="font-poppins text-xs">
+            10:00 West Indonesian Time - Finish
+          </p>
+        </div>
+      )}
 
       <p className="font-poppins text-xs obj-4">
         Jl. Yaktapena Raya, Pd. Ranji, Kec. Ciputat Timur, Kota Tangerang

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Section8() {
+export default function Section8({ en }) {
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = (e) => {
@@ -14,11 +14,14 @@ export default function Section8() {
       className="w-full flex flex-col items-center gap-10 p-4 relative font-poppins text-white section9"
       style={{ backgroundColor: "#557C55" }}
     >
-      <p className="font-smooch text-4xl obj-1">Kado Digital</p>
+      <p className="font-smooch text-4xl obj-1">
+        {!en ? "Kado Digital" : "Digital Gifts"}
+      </p>
 
       <p className="text-center text-sm  obj-2">
-        Kami Menerima Kado Pernikahan Dalam Bentuk Kado Digital Melalui Tombol
-        Dibawah Ini
+        {!en
+          ? "Kami Menerima Kado Pernikahan Dalam Bentuk Kado Digital Melalui Tombol Dibawah Ini"
+          : "We accept wedding gifts in digital form via the button below"}
       </p>
 
       <button
@@ -28,16 +31,23 @@ export default function Section8() {
         }}
         className="font-poppins text-xs transition-all duration-300 border px-3 py-2 rounded flex items-center hover:bg-white hover:bg-opacity-25  obj-3"
       >
-        Kado Digital
+        {!en ? "Kado Digital" : "Digital Gifts"}
       </button>
 
-      <p className="font-poppins text-center text-xs tracking-wider  obj-4">
-        Terimakasih atas Doa dan Restu Bapak/Ibu/Saudara/Saudari <br /> Kami
-        Ucapkan banyak Terima Kasih
-      </p>
+      {!en ? (
+        <p className="font-poppins text-center text-xs tracking-wider  obj-4">
+          Terimakasih atas Doa dan Restu Bapak/Ibu/Saudara/Saudari <br /> Kami
+          Ucapkan banyak Terima Kasih
+        </p>
+      ) : (
+        <p className="font-poppins text-center text-xs tracking-wider  obj-4">
+          Thank you for your prayers and blessings, Mr./Mrs./Brothers/Sisters
+        </p>
+      )}
+
       <div className="flex flex-col gap-3">
         <p className="font-poppins text-center text-xs tracking-wider obj-5">
-          Dari Kami Yang Berbahagia
+          {!en ? "Dari Kami Yang Berbahagia" : "From We Who Are Happy"}
         </p>
         <p className="font-smooch text-4xl  obj-6">Letva & Dika</p>
       </div>
@@ -49,7 +59,7 @@ export default function Section8() {
         }`}
         style={{ backdropFilter: "blur(10px)" }}
       >
-        <div>
+        <div className="flex flex-col gap-4">
           <img
             src={require("../assets/image/qr.png")}
             alt="qr"

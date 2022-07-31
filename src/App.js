@@ -11,7 +11,6 @@ import Section3 from "./pages/section-3";
 import Section4 from "./pages/section-4";
 import Section5 from "./pages/section-5";
 import Section6 from "./pages/section-6";
-import Section7 from "./pages/section-7";
 import Section8 from "./pages/section-8";
 import Section9 from "./pages/section-9";
 
@@ -41,14 +40,9 @@ const elementArray = [
   ".section6 .obj-3",
   ".section6 .obj-4",
 
-  // ".section7 .obj-1",
-  // ".section7 .obj-2",
-  // ".section7 .obj-3",
-  // ".section7 .obj-4",
-
-  // ".section8 .obj-1",
-  // ".section8 .obj-2",
-  // ".section8 .obj-3",
+  ".section8 .obj-1",
+  ".section8 .obj-2",
+  ".section8 .obj-3",
 
   ".section9 .obj-1",
   ".section9 .obj-2",
@@ -163,6 +157,8 @@ export default function App() {
     });
   }, []);
 
+  const location = window.location.pathname;
+
   return (
     <div
       className={`w-full min-h-screen bg-black overflow-hidden ${
@@ -179,19 +175,17 @@ export default function App() {
 
       <Section2 image={image} openMail={openMail} />
 
-      <Section3 />
+      <Section3 en={location !== "/" ? true : false} />
 
-      <Section4 />
+      <Section4 en={location !== "/" ? true : false} />
 
       <Section5 image={image} />
 
       <Section6 />
 
-      {/* <Section7 /> */}
+      <Section9 en={location !== "/" ? true : false} />
 
-      {/* <Section9 /> */}
-
-      <Section8 />
+      <Section8 en={location !== "/" ? true : false} />
     </div>
   );
 }

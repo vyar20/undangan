@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import imageArray from "../utils/image";
 
-export default function Section5({ image, openMail }) {
+export default function Section5({ image, en }) {
   const [time, setTime] = useState({
     days: 0,
     hours: 0,
@@ -49,22 +49,22 @@ export default function Section5({ image, openMail }) {
         <div className="flex justify-around w-full  obj-2">
           <div>
             <p className="text-4xl">{time.days}</p>
-            <p>Hari</p>
+            {!en ? <p>Hari</p> : <p>Days</p>}
           </div>
 
           <div>
             <p className="text-4xl">{time.hours}</p>
-            <p>Jam</p>
+            {!en ? <p>Jam</p> : <p>Hours</p>}
           </div>
 
           <div>
             <p className="text-4xl">{time.minutes}</p>
-            <p>Menit</p>
+            {!en ? <p>Menit</p> : <p>Minutes</p>}
           </div>
 
           <div>
             <p className="text-4xl">{time.seconds}</p>
-            <p>Detik</p>
+            {!en ? <p>Detik</p> : <p>Seconds</p>}
           </div>
         </div>
         <a

@@ -179,7 +179,7 @@ export default function App() {
 
       <Section4 en={location !== "/" ? true : false} />
 
-      <Section5 image={image} />
+      <Section5 image={image} en={location !== "/" ? true : false} />
 
       <Section6 />
 

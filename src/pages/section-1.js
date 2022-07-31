@@ -34,7 +34,7 @@ export default function Section1({ openMail, setOpenMail, startFunction }) {
       <img
         src={pic3}
         alt="img1"
-        className={`h-full bg-center absolute top-0 left-1/2 -translate-x-1/2 mx-auto max-w-full max-h-screen -z-10`}
+        className={`h-full absolute top-0 left-1/2 -translate-x-1/2 mx-auto -z-10`}
       />
       <div
         className={`w-full h-screen justify-center items-center text-center flex flex-col gap-4 z-10 transition-all duration-700 bg-slate-900 text-white ${

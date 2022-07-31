@@ -10,7 +10,7 @@ export default function Section2({ image, openMail }) {
           src={x}
           alt="i"
           key={x}
-          className={`h-full bg-center absolute top-0 left-1/2 -translate-x-1/2 mx-auto max-w-full max-h-screen ${
+          className={`h-full absolute top-0 left-1/2 -translate-x-1/2 mx-auto ${
             i === image ? "animate-landing-page" : "-z-10 opacity-0"
           }`}
         />
